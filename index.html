@@ -3,129 +3,169 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- गूगल सर्च (SEO) के लिए जरूरी सेटिंग्स -->
     <title>Abhi Solar Cleaning Services - बेस्ट सोलर पैनल सफाई और सर्विस</title>
     <meta name="description" content="Abhi Solar Cleaning Services: हमारे यहाँ सोलर पैनल्स की प्रोफेशनल प्रेशर वॉटर क्लीनिंग और इलेक्ट्रिकल मेंटेनेंस की जाती है। संपर्क करें: 7350827244">
-    <meta name="keywords" content="Abhi Solar Cleaning Services, Solar cleaning near me, सोलर पैनल की सफाई, Solar panel service, khedikarabhijit19@gmail.com">
+    <meta name="keywords" content="Abhi Solar Cleaning Services, Solar cleaning near me, सोलर पैनल की सफाई, Solar panel service">
 
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
         body { color: #333; background-color: #f4f7f6; line-height: 1.6; }
         
-        /* Header & Navigation */
         header { background: #1a365d; color: white; padding: 20px; text-align: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         header h1 { color: #f6ad55; font-size: 26px; font-weight: bold; }
         nav { margin-top: 10px; }
         nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
         nav a:hover { color: #f6ad55; }
 
-        /* Hero Section (Updated with your Team Photo) */
-        .hero { background: linear-gradient(rgba(26, 54, 93, 0.4), rgba(26, 54, 93, 0.5)), url('https://unsplash.com') no-repeat center center/cover; color: white; padding: 120px 20px; text-align: center; }
-        .hero h2 { font-size: 38px; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7); }
-        .hero p { font-size: 20px; margin-bottom: 25px; color: #fff; text-shadow: 1px 1px 3px rgba(0,0,0,0.7); font-weight: 500; }
-        .btn { background: #f6ad55; color: #1a365d; padding: 12px 24px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; font-size: 16px; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.2); }
+        /* Hero Section */
+        .hero { background: linear-gradient(rgba(26, 54, 93, 0.5), rgba(26, 54, 93, 0.6)), url('https://ibb.co') no-repeat center center/cover; color: white; padding: 140px 20px; text-align: center; }
+        .hero h2 { font-size: 38px; margin-bottom: 15px; text-shadow: 2px 2px 4px rgba(0,0,0,0.8); }
+        .hero p { font-size: 20px; margin-bottom: 25px; text-shadow: 1px 1px 3px rgba(0,0,0,0.8); font-weight: 500; }
+        
+        .btn { background: #f6ad55; color: #1a365d; padding: 12px 24px; text-decoration: none; font-weight: bold; border-radius: 5px; display: inline-block; font-size: 16px; transition: 0.3s; box-shadow: 0 4px 6px rgba(0,0,0,0.2); border: none; cursor: pointer; }
         .btn:hover { background: #ed8936; }
 
-        /* Sections */
-        .container { max-width: 1100px; margin: auto; padding: 40px 20px; }
+        .container { max-width: 1100px; margin: auto; padding: 50px 20px; }
         .section-title { text-align: center; margin-bottom: 40px; color: #1a365d; font-size: 28px; position: relative; }
         .section-title::after { content: ''; width: 60px; height: 4px; background: #f6ad55; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); }
 
-        /* Services Grid */
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .service-card { background: white; padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 4px 6px rgba(0,0,0,0.05); border-top: 5px solid #f6ad55; }
-        .service-card h3 { color: #1a365d; margin-bottom: 15px; }
+        .services-grid, .pricing-grid, .reviews-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+        .card { background: white; padding: 30px; border-radius: 8px; text-align: center; box-shadow: 0 4px 8px rgba(0,0,0,0.05); border-top: 5px solid #f6ad55; }
+        .card h3 { color: #1a365d; margin-bottom: 15px; }
+        
+        /* Pricing */
+        .price { font-size: 24px; color: #1a365d; font-weight: bold; margin: 15px 0; }
+        .price span { font-size: 14px; color: #718096; }
 
-        /* Contact Form & Info */
+        /* Booking Section Form Styles */
+        .booking-box { background: white; padding: 40px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); max-width: 700px; margin: auto; border-top: 5px solid #f6ad55; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 8px; font-weight: bold; color: #1a365d; }
+        .form-group input, .form-group select, .form-group textarea { width: 100%; padding: 12px; border: 1px solid #cbd5e0; border-radius: 5px; font-size: 16px; outline: none; }
+        
+        /* FAQ */
+        .faq-item { background: white; padding: 20px; border-radius: 8px; margin-bottom: 15px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+        .faq-item h4 { color: #1a365d; margin-bottom: 8px; font-size: 18px; }
+
+        /* Contact Section */
         .contact-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
         .contact-info { background: #1a365d; color: white; padding: 30px; border-radius: 8px; }
         .contact-info h3 { color: #f6ad55; margin-bottom: 20px; }
         .contact-info p { margin-bottom: 15px; font-size: 16px; }
         .contact-info a { color: #f6ad55; text-decoration: none; font-weight: bold; }
-        
-        form { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-        form input, form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #cbd5e0; border-radius: 5px; outline: none; font-size: 15px; }
-        form button { background: #1a365d; color: white; padding: 12px; border: none; width: 100%; border-radius: 5px; font-size: 16px; font-weight: bold; cursor: pointer; transition: 0.3s; }
-        form button:hover { background: #2b6cb0; }
 
-        /* WhatsApp Floating Button */
-        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; font-size: 16px; display: flex; align-items: center; justify-content: center; }
-        .whatsapp-float:hover { background-color: #128c7e; box-shadow: 0 6px 15px rgba(0,0,0,0.4); }
+        .whatsapp-float { position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; padding: 15px 25px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 10px rgba(0,0,0,0.3); z-index: 1000; font-size: 16px; display: flex; align-items: center; }
+        .whatsapp-float:hover { background-color: #128c7e; }
 
-        /* Footer */
-        footer { background: #1a365d; color: white; text-align: center; padding: 20px; margin-top: 40px; border-top: 1px solid #2d3748; }
+        footer { background: #1a365d; color: white; text-align: center; padding: 20px; margin-top: 40px; }
         footer p { font-size: 14px; color: #a0aec0; }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <h1>Abhi Solar Cleaning Services</h1>
         <nav>
             <a href="#home">होम</a>
-            <a href="#services">हमारी सेवाएं</a>
-            <a href="#contact">संपर्क करें</a>
+            <a href="#services">सेवाएं</a>
+            <a href="#pricing">रेट लिस्ट</a>
+            <a href="#booking">अपॉइंटमेंट बुक करें</a>
+            <a href="#faq">सवाल-जवाब</a>
+            <a href="#contact">संपर्क</a>
         </nav>
     </header>
 
-    <!-- Hero Section -->
     <section id="home" class="hero">
         <h2>सोलर पैनल गंदे हैं? बिजली का उत्पादन बढ़ाएं!</h2>
         <p>हमारी एक्सपर्ट टीम करेगी आपके सोलर पैनल्स की प्रोफेशनल सफाई और बेहतरीन सर्विसिंग।</p>
-        <a href="tel:7350827244" class="btn">अभी कॉल करें</a>
+        <a href="#booking" class="btn">अभी अपॉइंटमेंट बुक करें</a>
     </section>
 
     <!-- Services Section -->
     <section id="services" class="container">
         <h2 class="section-title">हमारी सेवाएं</h2>
         <div class="services-grid">
-            <div class="service-card">
-                <h3>3kW - 5kW रेसिडेंशियल क्लीनिंग</h3>
-                <p>घरों की छतों पर लगे सोलर पैनल्स की विशेष ब्रश और साफ पानी से बिना किसी स्क्रैच के धूल-मिट्टी साफ करना।</p>
+            <div class="card">
+                <h3>प्रेशर वॉटर क्लीनिंग</h3>
+                <p>विशेष ब्रश और साफ पानी से पैनल्स की धूल, मिट्टी और चिड़ियों की गंदगी को बिना किसी स्क्रैच के साफ करना।</p>
             </div>
-            <div class="service-card">
-                <h3>10kW+ कमर्शियल मेंटेनेंस</h3>
-                <p>फैक्ट्रियों, स्कूलों और बड़े सोलर फार्म्स के लिए हाई-प्रेशर वॉटर क्लीनिंग और इलेक्ट्रिकल वायरिंग की पूरी जांच।</p>
+            <div class="card">
+                <h3>इलेक्ट्रिकल मेंटेनेंस</h3>
+                <p>वायरिंग, इन्वर्टर और वोल्टेज आउटपुट की पूरी जांच ताकि आपका सिस्टम सुरक्षित और चालू रहे।</p>
             </div>
-            <div class="service-card">
+            <div class="card">
                 <h3>रेगुलर मेंटेनेंस प्लान</h3>
                 <p>लगातार बेहतरीन बिजली उत्पादन पाने के लिए हमारे बजट-फ्रेंडली मंथली या क्वाटरली क्लीनिंग पैकेजेस।</p>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container">
-        <h2 class="section-title">हमसे संपर्क करें</h2>
-        <div class="contact-container">
-            <div class="contact-info">
-                <h3>सफाई आज ही बुक करें!</h3>
-                <p><strong>📞 फोन:</strong> <a href="tel:7350827244">7350827244</a></p>
-                <p><strong>✉️ ईमेल:</strong> <a href="mailto:khedikarabhijit19@gmail.com">khedikarabhijit19@gmail.com</a></p>
-                <p><strong>📍 सर्विस एरिया:</strong> आपके शहर और आस-पास के सभी इलाकों में</p>
-                <p style="margin-top: 20px; color: #e2e8f0; font-size: 14px;">*नोट: गंदे सोलर पैनल्स बिजली का उत्पादन 30% तक घटा देते हैं। आज ही कॉल करके सर्विस बुक करें!</p>
+    <!-- Pricing Section -->
+    <section id="pricing" class="container" style="background-color: #fff; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.02);">
+        <h2 class="section-title">बजट-फ्रेंडली रेट लिस्ट</h2>
+        <div class="pricing-grid">
+            <div class="card">
+                <h3>3kW - 5kW प्लान</h3>
+                <div class="price">₹499 <span>/ प्रति सफाई</span></div>
+                <p>छोटे घरों और रेजिडेंशियल छतों के लिए बेस्ट। स्क्रैच-फ्री सफाई और बेसिक चेकअप शामिल।</p>
             </div>
-            
-            <form onsubmit="alert('आपका मैसेज मिल गया है! हम जल्द आपसे संपर्क करेंगे।'); return false;">
-                <input type="text" placeholder="आपका नाम" required>
-                <input type="email" placeholder="आपका ईमेल या मोबाइल नंबर" required>
-                <textarea rows="4" placeholder="आपको किस तरह की सर्विस चाहिए? (जैसे- घर का सोलर या फैक्ट्री का)" required></textarea>
-                <button type="submit">मैसेज भेजें</button>
+            <div class="card" style="border-top: 5px solid #1a365d;">
+                <h3>10kW+ कमर्शियल प्लान</h3>
+                <div class="price">₹1,499 <span>/ प्रति सफाई</span></div>
+                <p>दुकानों, स्कूलों और फैक्ट्रियों के लिए। हाई-प्रेशर वॉटर वाश और पूरी वायरिंग डायग्नोस्टिक्स।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking / Appointment Section -->
+    <section id="booking" class="container" style="background-color: #edf2f7; border-radius: 8px;">
+        <h2 class="section-title">ऑनलाइन अपॉइंटमेंट बुक करें</h2>
+        <div class="booking-box">
+            <form onsubmit="alert('बधाई हो! आपकी सोलर सफाई की बुकिंग स्वीकार कर ली गई है। हमारी टीम जल्द ही आपसे संपर्क करेगी।'); return false;">
+                <div class="form-group">
+                    <label>आपका पूरा नाम *</label>
+                    <input type="text" placeholder="अपना नाम लिखें" required>
+                </div>
+                <div class="form-group">
+                    <label>मोबाइल नंबर *</label>
+                    <input type="tel" placeholder="अपना 10 अंकों का नंबर डालें" pattern="[0-9]{10}" required>
+                </div>
+                <div class="form-group">
+                    <label>सफाई की तारीख चुनें (Date) *</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>पसंदीदा समय चुनें (Time) *</label>
+                    <select required>
+                        <option value="">समय चुनें...</option>
+                        <option value="सुबह 8 से 11">सुबह 08:00 AM - 11:00 AM</option>
+                        <option value="दोपहर 11 से 2">दोपहर 11:00 AM - 02:00 PM</option>
+                        <option value="दोपहर 2 से शाम 5">शाम 02:00 PM - 05:00 PM</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>सोलर प्लांट का प्रकार</label>
+                    <select>
+                        <option value="Residental">घर का सोलर (Residential)</option>
+                        <option value="Commercial">फैक्ट्री/दुकान का सोलर (Commercial)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>आपका पूरा पता लिखें *</label>
+                    <textarea rows="3" placeholder="यहाँ अपना पता लिखें जहाँ सर्विस चाहिए" required></textarea>
+                </div>
+                <button type="submit" class="btn" style="width: 100%; padding: 15px; font-size: 18px;">कंफर्म बुकिंग करें</button>
             </form>
         </div>
     </section>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me." class="whatsapp-float" target="_blank">
-        💬 WhatsApp Chat
-    </a>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Abhi Solar Cleaning Services. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
+    <!-- Reviews Section -->
+    <section class="container">
+        <h2 class="section-title">ग्राहकों की राय (Reviews)</h2>
+        <div class="reviews-grid">
+            <div class="card" style="border-top: 5px solid #2b6cb0;">
+                <p>"अभि सोलर की सर्विस के बाद मेरे घर के सोलर का पावर जनरेशन काफी बढ़ गया है। टीम बहुत प्रोफेशनल है।"</p>
+                <h4 style="margin-top:15px; color:#1a365d;">- राहुल शर्मा, (रेसिडेंशियल कस्टमर)</h4>
+            </div>
+            <div class="card" style="border-top: 5px solid #2b6cb0;">
+                
